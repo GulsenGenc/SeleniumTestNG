@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 
 import jdk.dynalink.linker.LinkerServices;
 import org.openqa.selenium.By;
@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import utilities.TestBase;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class C07_SoftAssert extends TestBase {
@@ -43,8 +46,19 @@ public class C07_SoftAssert extends TestBase {
         // "Australia (dollar)", "Canada (dollar)","Switzerland (franc)","China (yuan)","Denmark (krone)",
         // "Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)","Mexico (peso)",
         // "Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"
-        List<WebElement> optıonLıst=select.getOptions();
-
-
+        List<WebElement> optionsList = select.getOptions();
+        List<String> optionsListString = new ArrayList<>();
+        List<String> expectedListString = new ArrayList<>(Arrays.asList("Select One", "Australia (dollar)", "Canada (dollar)","Switzerland (franc)",
+                "China (yuan)","Denmark (krone)","Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)",
+                "Mexico (peso)","Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"));
+        for (WebElement each : optionsList
+        ) {
+            optionsListString.add(each.getText());
+        }
+        System.out.println("optionsListString = " + optionsListString);
+        Collections.sort(optionsListString);
+        Collections.sort(expectedListString);
+        softAssert.assertEquals(optionsListString,expectedListString,"iki liste birbirinden farklı");
+        softAssert.assertAll();
     }
 }

@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -7,8 +7,16 @@ import utilities.TestBase;
 
 public class C02_BeforeClass_AfterClass extends TestBase {
 
-    //TestNG de beforeclass ve afterclass methodlarını statıc yapmak zorunda değiliz
+    // JUnit'te @BeforeClass  ve @AfterClass notasyonuna sahip
+    // method'lar static olmak ZORUNDAYDI
+    // TestNG bu ZORUNLULUK'tan bizi kurtariyor
 
+    /*
+     TestNg bize daha fazla before ve after notasyonlari sunar
+     diger before/after notasyonlari tanimlayacagimiz
+     grup, test veya suite'den once ve sonra calisirlar
+     ileride xml dosyalari ile birlikte bunu gorecegiz
+     */
     @BeforeClass
     public void beforeClassMethodu() {
         System.out.println("before class çalıştı");

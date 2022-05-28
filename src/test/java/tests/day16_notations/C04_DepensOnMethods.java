@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -13,6 +13,11 @@ import utilities.TestBase;
 import java.time.Duration;
 
 public class C04_DepensOnMethods {
+    /*
+     DependsOnMethods test method'larinin calisma siralamasina karismaz
+     Sadece bagli olan test, baglandigi testin sonucuna bakar
+     baglandigi test PASSED olmazsa, baglanan test hic calismaz(ignore)
+    */
     protected WebDriver driver;
 
     @BeforeClass
