@@ -1,4 +1,4 @@
-package day18_pom;
+package tests.day18_pom;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,8 +20,10 @@ public class C02_ConfigReaderKullanımı {
 
         // kullanici sifre kutusuna rastgele bir password yazdirin
         facebookPage.passwordKutusu.sendKeys(ConfigReader.getProperty("fbWrongPassword"));
+
         // login butonuna basin
         facebookPage.loginButton.click();
+
         // giris yapilamadigini test edin
        Assert.assertTrue(facebookPage.girisYapılamadıYazısı.isDisplayed());
        Driver.closeDriver();

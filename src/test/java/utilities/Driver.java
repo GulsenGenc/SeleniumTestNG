@@ -18,6 +18,10 @@ public class Driver {
     ilgılı ayarların yapılması ve en sonunda drıverın kapatılması tercıh edılmıştır.
 
      */
+
+    private Driver() {
+    }
+
     static WebDriver driver;
 
     public static WebDriver getDriver() {
