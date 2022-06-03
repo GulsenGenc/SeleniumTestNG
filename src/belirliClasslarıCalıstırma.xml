@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- bir xml dosyası ile projemizde istediğimiz testleri,package lerı,classları veya test methodlarını çalıştırabılırız
+bunun ıcın yapmamız gereken suite den başlayıp test hıyerarşisine uygun olarak calısacak tum testlerı
+xml formatında yazmamızdır -->
+
+<suite name="istenen classları calıstırma">
+    <test name="classlar">
+        <classes>
+            <class name="tests.day16_notations.C03_Priority"></class>
+            <class name="tests.day19_smokeTest.C01_PozitifLoginTest_RentalCar"></class>
+            
+        </classes>
+    </test>
+</suite>

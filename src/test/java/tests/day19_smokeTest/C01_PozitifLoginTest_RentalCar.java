@@ -5,7 +5,7 @@ import pages.BrcPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01_PozitifLoginTest {
+public class C01_PozitifLoginTest_RentalCar {
 
     @Test
     public void pozitifLoginTest() {
